@@ -1,7 +1,12 @@
-const Card = () => {
+import styled from "styled-components";
+
+const Card = ({ resourceName, resourceDescription }) => {
   return (
     <>
-      <div>card</div>
+      <div>
+        <h4>{resourceName}</h4>
+        <p>{resourceDescription}</p>
+      </div>
     </>
   );
 };
