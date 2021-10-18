@@ -1,25 +1,25 @@
 import { ThemeProvider } from "styled-components";
 import Theme from "./styles/Theme";
-import styled from "styled-components";
 import { useDispatch, useSelector } from "react-redux";
 import GlobalStyle from "./styles/GlobalStyles";
-import Card from "./components/Card/Card";
+import { Card, Dropdown } from "./components";
 
 function App() {
   const dispatch = useDispatch();
-  const programsList = useSelector((state) => state.programs.programsList);
-
+  const programsList = useSelector(({ programs }) => programs.programsList);
+  const categoryOptions = useSelector(
+    ({ programs }) => programs.categoryOptions
+  );
+  console.log(categoryOptions);
   return (
     <>
       <ThemeProvider theme={Theme}>
         <GlobalStyle />
         <div className="layout">
           <main className="body">
+            <Dropdown options={categoryOptions} />
             {programsList.map((program) => (
-              <Card
-                resourceName={program["Resource Name"]}
-                resourceDescription={program["Resource Description"]}
-              ></Card>
+              <Card resourceName={program["Resource Name"]}></Card>
             ))}
           </main>
         </div>
