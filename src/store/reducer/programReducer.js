@@ -36,6 +36,20 @@ const typeOptions = programsList.reduce((option, program) => {
     )
     .sort((a, b) => a.value.localeCompare(b.value));
 }, []);
+const phaseOptions = programsList.reduce((option, program) => {
+  return [
+    ...option,
+    {
+      value: program["Program Phase"],
+      label: program["Program Phase"],
+    },
+  ]
+    .filter(
+      (option, index, array) =>
+        array.findIndex((o) => o.value === option.value) == index
+    )
+    .sort((a, b) => a.value.localeCompare(b.value));
+}, []);
 const tagsOptions = programsList.reduce((option, program) => {
   let tags = program.Tags.map((tag) => {
     return {
@@ -51,11 +65,18 @@ const tagsOptions = programsList.reduce((option, program) => {
     )
     .sort((a, b) => a.value.localeCompare(b.value));
 }, []);
+const filterParams = {
+  category: [],
+  type: [],
+  phase: [],
+  tags: [],
+};
 
 const initialState = {
   programsList: programsListWithID,
   categoryOptions: categoryOptions,
   typeOptions: typeOptions,
+  phaseOptions: phaseOptions,
   tagsOptions: tagsOptions,
   filteredProgramsList: programsListWithID,
 };

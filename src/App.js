@@ -12,6 +12,7 @@ function App() {
     ({ programs }) => programs.categoryOptions
   );
   const typeOptions = useSelector(({ programs }) => programs.typeOptions);
+  const phaseOptions = useSelector(({ programs }) => programs.phaseOptions);
   const tagsOptions = useSelector(({ programs }) => programs.tagsOptions);
 
   const handleOnChange = (value) => {
@@ -23,8 +24,13 @@ function App() {
         <GlobalStyle />
         <div className="layout">
           <main className="body">
-            <Dropdown onChange={handleOnChange} options={categoryOptions} />
-            <Dropdown options={typeOptions} />
+            <Dropdown
+              isMulti
+              onChange={handleOnChange}
+              options={categoryOptions}
+            />
+            <Dropdown isMulti options={typeOptions} />
+            <Dropdown isMulti options={phaseOptions} />
             <Dropdown isMulti options={tagsOptions} />
             {programsList.map((program) => (
               <Card
