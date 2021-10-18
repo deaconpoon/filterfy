@@ -10,7 +10,11 @@ function App() {
   const categoryOptions = useSelector(
     ({ programs }) => programs.categoryOptions
   );
+  const typeOptions = useSelector(({ programs }) => programs.typeOptions);
+  const tagsOptions = useSelector(({ programs }) => programs.tagsOptions);
   console.log(categoryOptions);
+  console.log(typeOptions);
+  console.log(tagsOptions);
   return (
     <>
       <ThemeProvider theme={Theme}>
@@ -18,6 +22,8 @@ function App() {
         <div className="layout">
           <main className="body">
             <Dropdown options={categoryOptions} />
+            <Dropdown options={typeOptions} />
+            <Dropdown options={tagsOptions} />
             {programsList.map((program) => (
               <Card resourceName={program["Resource Name"]}></Card>
             ))}
