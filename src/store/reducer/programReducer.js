@@ -51,19 +51,29 @@ const tagsOptions = programsList.reduce((option, program) => {
     )
     .sort((a, b) => a.value.localeCompare(b.value));
 }, []);
+
 const initialState = {
   programsList: programsListWithID,
   categoryOptions: categoryOptions,
   typeOptions: typeOptions,
   tagsOptions: tagsOptions,
+  filteredProgramsList: programsListWithID,
 };
 
 const programsSlice = createSlice({
   name: "programs",
   initialState: initialState,
-  reducers: {},
+  reducers: {
+    filterCategory: (state, { payload }) => {
+      if (payload.value === "All") {
+        console.log(payload);
+      }
+    },
+  },
 });
 
 const { actions } = programsSlice;
+
+export const { filterCategory } = actions;
 
 export default programsSlice.reducer;

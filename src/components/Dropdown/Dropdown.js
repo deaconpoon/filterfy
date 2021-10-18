@@ -1,9 +1,12 @@
 import Select from "react-select";
 
-const Dropdown = ({ options }) => {
+const Dropdown = ({ options, ...rest }) => {
+  /*   const handleOnChange = (value) => {
+    console.log(value);
+  }; */
   return (
     <>
-      <Select options={options}></Select>
+      <Select {...rest} options={options}></Select>
     </>
   );
 };

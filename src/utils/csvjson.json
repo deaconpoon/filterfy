@@ -5,7 +5,13 @@
     "Program Category": "All",
     "Program Type": "All",
     "Program Phase": "Engage",
-    "Tags": ["Participant Material", "Virtual Mentoring", "Employee Development", "Mentoring Conversations", "Training"]
+    "Tags": [
+      "Participant Material",
+      "Virtual Mentoring",
+      "Employee Development",
+      "Mentoring Conversations",
+      "Training"
+    ]
   },
   {
     "Resource Name": "Mentoring Recruiting Template",
@@ -13,7 +19,13 @@
     "Program Category": "All",
     "Program Type": "All",
     "Program Phase": "Launch",
-    "Tags": ["Brandable, Marketing", "Communications", "Recruiting Participants", "Program Success"]
+    "Tags": [
+      "Brandable",
+      "Marketing",
+      "Communications",
+      "Recruiting Participants",
+      "Program Success"
+    ]
   },
   {
     "Resource Name": "Using HRIS and SSO Integrations for a Connected Employee Experience",
@@ -29,7 +41,14 @@
     "Program Category": "All",
     "Program Type": "All",
     "Program Phase": "Launch",
-    "Tags": ["Videos", "Workshop", "Quick Connections", "Flash Mentoring", "Program Design", "Employee Development"]
+    "Tags": [
+      "Videos",
+      "Workshop",
+      "Quick Connections",
+      "Flash Mentoring",
+      "Program Design",
+      "Employee Development"
+    ]
   },
   {
     "Resource Name": "Affinity Circles",
@@ -37,7 +56,13 @@
     "Program Category": "All",
     "Program Type": "All",
     "Program Phase": "Launch",
-    "Tags": ["Videos", "Workshop", "Affinity Circles", "Mentoring Groups", "Employee Development"]
+    "Tags": [
+      "Videos",
+      "Workshop",
+      "Affinity Circles",
+      "Mentoring Groups",
+      "Employee Development"
+    ]
   },
   {
     "Resource Name": "Level Up Your Match Scores",
@@ -45,7 +70,14 @@
     "Program Category": "All",
     "Program Type": "All",
     "Program Phase": "Match",
-    "Tags": ["Videos", "Workshop", "Matching", "Visual Personality Survey", "Profiles", "Program Basics"]
+    "Tags": [
+      "Videos",
+      "Workshop",
+      "Matching",
+      "Visual Personality Survey",
+      "Profiles",
+      "Program Basics"
+    ]
   },
   {
     "Resource Name": "Ask MQ Experts: Changes Coming for Mentoring",
@@ -53,7 +85,14 @@
     "Program Category": "All",
     "Program Type": "All",
     "Program Phase": "All",
-    "Tags": ["Videos", "Workshop", "Virtual Mentoring", "Open Programs", "Program Success", "Employee Development"]
+    "Tags": [
+      "Videos",
+      "Workshop",
+      "Virtual Mentoring",
+      "Open Programs",
+      "Program Success",
+      "Employee Development"
+    ]
   },
   {
     "Resource Name": "The Strategic Mentoring Framework",
@@ -61,7 +100,14 @@
     "Program Category": "All",
     "Program Type": "All",
     "Program Phase": "Launch",
-    "Tags": ["Videos", "Workshop", "Strategic Mentoring Framework", "Mentoring Strategy", "Employee Development", "Program Success"]
+    "Tags": [
+      "Videos",
+      "Workshop",
+      "Strategic Mentoring Framework",
+      "Mentoring Strategy",
+      "Employee Development",
+      "Program Success"
+    ]
   },
   {
     "Resource Name": "High Potential - CliQ Start Guide",
@@ -69,7 +115,13 @@
     "Program Category": "Career Development",
     "Program Type": "High Potential",
     "Program Phase": "All",
-    "Tags": ["Full Guide", "Career Development", "HiPo", "Emerging Leaders", "Leadership Development"]
+    "Tags": [
+      "Full Guide",
+      "Career Development",
+      "HiPo",
+      "Emerging Leaders",
+      "Leadership Development"
+    ]
   },
   {
     "Resource Name": "Onboarding - Launch Deck",
@@ -77,7 +129,12 @@
     "Program Category": "Career Development",
     "Program Type": "Onboarding",
     "Program Phase": "Launch",
-    "Tags": ["Launch Deck", "Career Development", "New Hire", "Employee Development"]
+    "Tags": [
+      "Launch Deck",
+      "Career Development",
+      "New Hire",
+      "Employee Development"
+    ]
   },
   {
     "Resource Name": "Mentoring ROI: A How-To Guide",
@@ -85,7 +142,14 @@
     "Program Category": "All",
     "Program Type": "All",
     "Program Phase": "Measure",
-    "Tags": ["Videos", "Workshop", "Metrics", "Measurements", "ROI", "Program Success"]
+    "Tags": [
+      "Videos",
+      "Workshop",
+      "Metrics",
+      "Measurements",
+      "ROI",
+      "Program Success"
+    ]
   },
   {
     "Resource Name": "MentorLab: The Power of Sharing Your Story",
@@ -93,7 +157,15 @@
     "Program Category": "All",
     "Program Type": "All",
     "Program Phase": "Launch",
-    "Tags": ["Videos", "Workshop", "MentorLab", "Mentors", "Training", "Employee Development", "Program Success"]
+    "Tags": [
+      "Videos",
+      "Workshop",
+      "MentorLab",
+      "Mentors",
+      "Training",
+      "Employee Development",
+      "Program Success"
+    ]
   },
   {
     "Resource Name": "Sales Mentoring - Launch Deck",
@@ -101,7 +173,13 @@
     "Program Category": "Functional Expertise",
     "Program Type": "Sales",
     "Program Phase": "Launch",
-    "Tags": ["Launch Deck", "Sales", "Functional Expertise", "Sales Coaching", "Technical Programs"]
+    "Tags": [
+      "Launch Deck",
+      "Sales",
+      "Functional Expertise",
+      "Sales Coaching",
+      "Technical Programs"
+    ]
   },
   {
     "Resource Name": "Technology Mentoring - Communications",
@@ -109,7 +187,14 @@
     "Program Category": "Functional Expertise",
     "Program Type": "Technology",
     "Program Phase": "Engage",
-    "Tags": ["Communications", "Technology", "Functional Expertise", "Technology Coaching", "Technical Programs", "Participant Material"]
+    "Tags": [
+      "Communications",
+      "Technology",
+      "Functional Expertise",
+      "Technology Coaching",
+      "Technical Programs",
+      "Participant Material"
+    ]
   },
   {
     "Resource Name": "Technology Mentoring - Curated Resources",
@@ -117,7 +202,14 @@
     "Program Category": "Functional Expertise",
     "Program Type": "Technology",
     "Program Phase": "Engage",
-    "Tags": ["Curated Resources", "Technology", "Functional Expertise", "Technology Coaching", "Technical Programs", "Participant Material"]
+    "Tags": [
+      "Curated Resources",
+      "Technology",
+      "Functional Expertise",
+      "Technology Coaching",
+      "Technical Programs",
+      "Participant Material"
+    ]
   },
   {
     "Resource Name": "Open Mentoring - CliQ Start Guide",
@@ -125,7 +217,15 @@
     "Program Category": "Use Cases",
     "Program Type": "Open Mentoring",
     "Program Phase": "All",
-    "Tags": ["Full Guide", "Open Programs", "Career Development", "Diversity & Inclusion", "Coaching", "Global", "Employee Development"]
+    "Tags": [
+      "Full Guide",
+      "Open Programs",
+      "Career Development",
+      "Diversity & Inclusion",
+      "Coaching",
+      "Global",
+      "Employee Development"
+    ]
   },
   {
     "Resource Name": "Open Mentoring - Launch Deck",
@@ -133,7 +233,15 @@
     "Program Category": "Use Cases",
     "Program Type": "Open Mentoring",
     "Program Phase": "Launch",
-    "Tags": ["Launch Deck", "Open Programs", "Career Development", "Diversity & Inclusion", "Coaching", "Global", "Employee Development"]
+    "Tags": [
+      "Launch Deck",
+      "Open Programs",
+      "Career Development",
+      "Diversity & Inclusion",
+      "Coaching",
+      "Global",
+      "Employee Development"
+    ]
   },
   {
     "Resource Name": "Finding the Right Success Metrics for You",
@@ -141,7 +249,14 @@
     "Program Category": "All",
     "Program Type": "All",
     "Program Phase": "Measure",
-    "Tags": ["Videos", "Workshop", "Metrics", "Measurements", "ROI", "Program Success"]
+    "Tags": [
+      "Videos",
+      "Workshop",
+      "Metrics",
+      "Measurements",
+      "ROI",
+      "Program Success"
+    ]
   },
   {
     "Resource Name": "Finance Mentoring - CliQ Start Guide",
@@ -149,7 +264,13 @@
     "Program Category": "Functional Expertise",
     "Program Type": "Finance",
     "Program Phase": "All",
-    "Tags": ["Full Guide", "Finance", "Functional Expertise", "Finance Coaching", "Technical Programs"]
+    "Tags": [
+      "Full Guide",
+      "Finance",
+      "Functional Expertise",
+      "Finance Coaching",
+      "Technical Programs"
+    ]
   },
   {
     "Resource Name": "Women's Network - Executive Summary",
@@ -157,7 +278,13 @@
     "Program Category": "Diversity & Inclusion",
     "Program Type": "Women's Networks",
     "Program Phase": "Launch",
-    "Tags": ["Exec Summary", "Diversity & Inclusion", "Women", "Gender", "Identity Programs"]
+    "Tags": [
+      "Exec Summary",
+      "Diversity & Inclusion",
+      "Women",
+      "Gender",
+      "Identity Programs"
+    ]
   },
   {
     "Resource Name": "Veterans Network - Milestones",
@@ -165,7 +292,13 @@
     "Program Category": "Diversity & Inclusion",
     "Program Type": "Veterans Network",
     "Program Phase": "Launch",
-    "Tags": ["Milestones", "Diversity & Inclusion", "Veterans", "Experience Programs", "Participant Material"]
+    "Tags": [
+      "Milestones",
+      "Diversity & Inclusion",
+      "Veterans",
+      "Experience Programs",
+      "Participant Material"
+    ]
   },
   {
     "Resource Name": "Reverse Mentoring - Curated Resources",
@@ -173,7 +306,15 @@
     "Program Category": "Use Cases",
     "Program Type": "Reverse Mentoring",
     "Program Phase": "Engage",
-    "Tags": ["Curated Resources", "Reverse Mentoring", "Diversity & Inclusion", "Experience Programs", "Technical Programs", "Leadership Development", "Participant Material"]
+    "Tags": [
+      "Curated Resources",
+      "Reverse Mentoring",
+      "Diversity & Inclusion",
+      "Experience Programs",
+      "Technical Programs",
+      "Leadership Development",
+      "Participant Material"
+    ]
   },
   {
     "Resource Name": "Leadership Development - Program Design",
@@ -181,7 +322,13 @@
     "Program Category": "Career Development",
     "Program Type": "Leadership Development",
     "Program Phase": "Launch",
-    "Tags": ["Program Design", "Leadership Development", "Career Development", "Emerging Leaders", "HiPo"]
+    "Tags": [
+      "Program Design",
+      "Leadership Development",
+      "Career Development",
+      "Emerging Leaders",
+      "HiPo"
+    ]
   },
   {
     "Resource Name": "Succession Planning - Communications",
@@ -189,7 +336,14 @@
     "Program Category": "Career Development",
     "Program Type": "Succession Planning",
     "Program Phase": "Engage",
-    "Tags": ["Communications", "Career Development", "Leadership Development", "Succession", "Sponsorship", "Participant Material"]
+    "Tags": [
+      "Communications",
+      "Career Development",
+      "Leadership Development",
+      "Succession",
+      "Sponsorship",
+      "Participant Material"
+    ]
   },
   {
     "Resource Name": "What Are Mentoring Circles and How Do They Work?",
@@ -197,7 +351,15 @@
     "Program Category": "All",
     "Program Type": "All",
     "Program Phase": "Launch",
-    "Tags": ["Videos", "Workshop", "Affinity Circles", "Mentoring Circles", "Mentoring Groups", "Program Design", "Employee Development"]
+    "Tags": [
+      "Videos",
+      "Workshop",
+      "Affinity Circles",
+      "Mentoring Circles",
+      "Mentoring Groups",
+      "Program Design",
+      "Employee Development"
+    ]
   },
   {
     "Resource Name": "Coaching Partnership Agreement Template",
@@ -205,7 +367,12 @@
     "Program Category": "All",
     "Program Type": "All",
     "Program Phase": "Engage",
-    "Tags": ["Participant Material", "Brandable", "Coaching Relationships", "Employee Development"]
+    "Tags": [
+      "Participant Material",
+      "Brandable",
+      "Coaching Relationships",
+      "Employee Development"
+    ]
   },
   {
     "Resource Name": "Mentoring Closure Plan Template",
@@ -213,7 +380,12 @@
     "Program Category": "All",
     "Program Type": "All",
     "Program Phase": "Engage",
-    "Tags": ["Participant Material", "Brandable", "Mentoring Relationships", "Employee Development"]
+    "Tags": [
+      "Participant Material",
+      "Brandable",
+      "Mentoring Relationships",
+      "Employee Development"
+    ]
   },
   {
     "Resource Name": "Mentoring Skills Learning Series – Finding Time for Mentoring",
@@ -221,6 +393,13 @@
     "Program Category": "All",
     "Program Type": "All",
     "Program Phase": "Engage",
-    "Tags": ["Participant Material", "Mentoring Skills", "Learning Series", "Training", "Mentoring Relationships", "Employee Development"]
+    "Tags": [
+      "Participant Material",
+      "Mentoring Skills",
+      "Learning Series",
+      "Training",
+      "Mentoring Relationships",
+      "Employee Development"
+    ]
   }
 ]
