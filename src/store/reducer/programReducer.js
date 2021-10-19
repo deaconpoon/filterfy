@@ -118,7 +118,7 @@ const programsSlice = createSlice({
       if (payload === null) {
         state.filterParams.tags = [];
       } else {
-        state.filterParams.tags = payload.value;
+        state.filterParams.tags = payload;
       }
     },
     renderFilteredProgramsList: (state) => {
@@ -138,9 +138,9 @@ const programsSlice = createSlice({
             : program["Program Phase"].includes(state.filterParams.phase) ||
               program["Program Phase"].includes("All")) &&
           (state.filterParams.tags === []
-            ? program["Tags"]
+            ? program.Tags
             : state.filterParams.tags.every((filteredTag) =>
-                program["Tags"].every((tag) => tag.includes(filteredTag.value))
+                program.Tags.some((tag) => tag.includes(filteredTag.value))
               ))
       );
     },
