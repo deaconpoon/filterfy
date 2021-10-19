@@ -6,7 +6,7 @@ const Dropdown = ({ options, ...rest }) => {
   }; */
   return (
     <>
-      <Select {...rest} options={options}></Select>
+      <Select {...rest} isClearable options={options}></Select>
     </>
   );
 };

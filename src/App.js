@@ -3,11 +3,19 @@ import Theme from "./styles/Theme";
 import { useDispatch, useSelector } from "react-redux";
 import GlobalStyle from "./styles/GlobalStyles";
 import { Card, Dropdown } from "./components";
-import { filterCategory } from "./store/reducer/programReducer";
+import {
+  filterCategory,
+  filterType,
+  filterPhase,
+  filterTags,
+  renderFilteredProgramList,
+} from "./store/reducer/programReducer";
 
 function App() {
   const dispatch = useDispatch();
-  const programsList = useSelector(({ programs }) => programs.programsList);
+  const filteredProgramsList = useSelector(
+    ({ programs }) => programs.filteredProgramsList
+  );
   const categoryOptions = useSelector(
     ({ programs }) => programs.categoryOptions
   );
@@ -15,9 +23,26 @@ function App() {
   const phaseOptions = useSelector(({ programs }) => programs.phaseOptions);
   const tagsOptions = useSelector(({ programs }) => programs.tagsOptions);
 
-  const handleOnChange = (value) => {
+  const handleCategoryFilter = (value) => {
     dispatch(filterCategory(value));
+    dispatch(renderFilteredProgramList());
   };
+
+  const handleTypeFilter = (value) => {
+    dispatch(filterType(value));
+    dispatch(renderFilteredProgramList());
+  };
+
+  const handlePhaseFilter = (value) => {
+    dispatch(filterPhase(value));
+    dispatch(renderFilteredProgramList());
+  };
+  const handleTagsFilter = (value) => {
+    dispatch(filterTags(value));
+    console.log(value);
+    dispatch(renderFilteredProgramList());
+  };
+
   return (
     <>
       <ThemeProvider theme={Theme}>
@@ -25,14 +50,27 @@ function App() {
         <div className="layout">
           <main className="body">
             <Dropdown
-              isMulti
-              onChange={handleOnChange}
+              placeholder="Select Program Category"
+              onChange={handleCategoryFilter}
               options={categoryOptions}
             />
-            <Dropdown isMulti options={typeOptions} />
-            <Dropdown isMulti options={phaseOptions} />
-            <Dropdown isMulti options={tagsOptions} />
-            {programsList.map((program) => (
+            <Dropdown
+              placeholder="Select Program Type"
+              onChange={handleTypeFilter}
+              options={typeOptions}
+            />
+            <Dropdown
+              placeholder="Select Program Phase"
+              onChange={handlePhaseFilter}
+              options={phaseOptions}
+            />
+            <Dropdown
+              isMulti
+              onChange={handleTagsFilter}
+              placeholder="Select Program Tags"
+              options={tagsOptions}
+            />
+            {filteredProgramsList.map((program) => (
               <Card
                 key={program.id}
                 resourceName={program["Resource Name"]}

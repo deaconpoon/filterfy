@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { v4 as uuidv4 } from "uuid";
+import _ from "lodash";
 import ProgramsList from "../../utils/csvjson.json";
 
 const programsList = JSON.parse(JSON.stringify(ProgramsList));
@@ -72,6 +73,12 @@ const filterParams = {
   tags: [],
 };
 
+//loop through programsList
+
+//if filterParam is [], then return. Else each program filter through each param in filterParams
+
+//return program if it matches all the test
+
 const initialState = {
   programsList: programsListWithID,
   categoryOptions: categoryOptions,
@@ -79,6 +86,7 @@ const initialState = {
   phaseOptions: phaseOptions,
   tagsOptions: tagsOptions,
   filteredProgramsList: programsListWithID,
+  filterParams: filterParams,
 };
 
 const programsSlice = createSlice({
@@ -86,15 +94,65 @@ const programsSlice = createSlice({
   initialState: initialState,
   reducers: {
     filterCategory: (state, { payload }) => {
-      if (payload.value === "All") {
-        console.log(payload);
+      if (payload === null) {
+        state.filterParams.category = [];
+      } else {
+        state.filterParams.category = payload.value;
       }
+    },
+    filterType: (state, { payload }) => {
+      if (payload === null) {
+        state.filterParams.type = [];
+      } else {
+        state.filterParams.type = payload.value;
+      }
+    },
+    filterPhase: (state, { payload }) => {
+      if (payload === null) {
+        state.filterParams.phase = [];
+      } else {
+        state.filterParams.phase = payload.value;
+      }
+    },
+    filterTags: (state, { payload }) => {
+      if (payload === null) {
+        state.filterParams.tags = [];
+      } else {
+        state.filterParams.tags = payload.value;
+      }
+    },
+    renderFilteredProgramList: (state) => {
+      state.filteredProgramsList = programsListWithID.filter(
+        (program) =>
+          (state.filterParams.category === []
+            ? program["Program Category"]
+            : program["Program Category"].includes(
+                state.filterParams.category
+              )) &&
+          (state.filterParams.type === []
+            ? program["Program Type"]
+            : program["Program Type"].includes(state.filterParams.type)) &&
+          (state.filterParams.phase === []
+            ? program["Program Phase"]
+            : program["Program Phase"].includes(state.filterParams.phase)) &&
+          (state.filterParams.tags === []
+            ? program.Tags
+            : state.filterParams.tags.every((filteredTag) =>
+                program["Tags"].every((tag) => tag.includes(filteredTag.value))
+              ))
+      );
     },
   },
 });
 
 const { actions } = programsSlice;
 
-export const { filterCategory } = actions;
+export const {
+  filterCategory,
+  filterType,
+  filterPhase,
+  filterTags,
+  renderFilteredProgramList,
+} = actions;
 
 export default programsSlice.reducer;
