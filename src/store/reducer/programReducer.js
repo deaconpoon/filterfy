@@ -128,15 +128,17 @@ const programsSlice = createSlice({
             ? program["Program Category"]
             : program["Program Category"].includes(
                 state.filterParams.category
-              )) &&
+              ) || program["Program Category"].includes("All")) &&
           (state.filterParams.type === []
             ? program["Program Type"]
-            : program["Program Type"].includes(state.filterParams.type)) &&
+            : program["Program Type"].includes(state.filterParams.type) ||
+              program["Program Type"].includes("All")) &&
           (state.filterParams.phase === []
             ? program["Program Phase"]
-            : program["Program Phase"].includes(state.filterParams.phase)) &&
+            : program["Program Phase"].includes(state.filterParams.phase) ||
+              program["Program Phase"].includes("All")) &&
           (state.filterParams.tags === []
-            ? program.Tags
+            ? program["Tags"]
             : state.filterParams.tags.every((filteredTag) =>
                 program["Tags"].every((tag) => tag.includes(filteredTag.value))
               ))
@@ -144,6 +146,8 @@ const programsSlice = createSlice({
     },
   },
 });
+
+//if tags is an []
 
 const { actions } = programsSlice;
 
