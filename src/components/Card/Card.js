@@ -1,30 +1,34 @@
 import styled from "styled-components";
+import { motion, AnimatePresence } from "framer-motion";
 
-const Container = styled.li`
+const Container = styled(motion.li)`
+  width: 100%;
+  background-color: #ffffff;
   display: inline-flex;
   flex-direction: column;
   border-radius: 1em;
   padding: 0.5em;
-  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
-    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
-    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
-    0 100px 80px rgba(0, 0, 0, 0.12);
-  :hover {
-    cursor: pointer;
-    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.05),
-      0 6.7px 5.3px rgba(0, 0, 0, 0.078), 0 12.5px 10px rgba(0, 0, 0, 0.12),
-      0 22.3px 17.9px rgba(0, 0, 0, 0.082), 0 41.8px 33.4px rgba(0, 0, 0, 0.096),
-      0 100px 80px rgba(0, 0, 0, 0.12);
-  }
+  margin-bottom: 0.5em;
+  gap: 1em;
+  box-shadow: 1px 2px 6px 0px rgba(99, 99, 99, 0.527);
 `;
 
 const Card = ({ resourceName }) => {
+  const spring = { type: "spring", bounce: 0.8 };
   return (
     <>
-      <Container>
-        <h4>{resourceName}</h4>
-        {/*   <p>{resourceDescription}</p> */}
-      </Container>
+      <AnimatePresence>
+        <Container
+          transition={spring}
+          whileHover={{ scale: 1.01 }}
+          whileTap={{ scale: 0.98 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ y: 300, opacity: 0 }}
+        >
+          <h4>{resourceName}</h4>
+        </Container>
+      </AnimatePresence>
     </>
   );
 };

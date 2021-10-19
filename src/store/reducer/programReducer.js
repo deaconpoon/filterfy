@@ -121,7 +121,7 @@ const programsSlice = createSlice({
         state.filterParams.tags = payload.value;
       }
     },
-    renderFilteredProgramList: (state) => {
+    renderFilteredProgramsList: (state) => {
       state.filteredProgramsList = programsListWithID.filter(
         (program) =>
           (state.filterParams.category === []
@@ -156,7 +156,7 @@ export const {
   filterType,
   filterPhase,
   filterTags,
-  renderFilteredProgramList,
+  renderFilteredProgramsList,
 } = actions;
 
 export default programsSlice.reducer;

@@ -106,31 +106,43 @@ const GlobalStyle = createGlobalStyle`
         flex-wrap: nowrap; 
     }
     .body {
-        flex-grow: 2 ;
-
-        padding: 8px;
+        padding: 2em;
         overflow: auto;
         min-height: 2em;
+        max-width: 1400px;
+        margin: 0 auto;
     }
     .grid {
 
+        @media (min-width: ${({ theme }) => theme.breakpoints.sm}) {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: auto;
         gap: 1em;
-          @media (min-width: ${({ theme }) => theme.breakpoints.sm}) {
             grid-template-columns: repeat(4, 1fr);
         }
-          @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+        @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 1em;
             grid-template-columns: repeat(5, 1fr);
         }
-          @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+        @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 1em;
             grid-template-columns: repeat(6, 1fr) ;
-          
+        
         }
-          @media (min-width: ${({ theme }) => theme.breakpoints.xl}) {
+        @media (min-width: ${({ theme }) => theme.breakpoints.xl}) {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 1em;
             grid-template-columns: repeat(8, 1fr) ;
-          
+        
         }
     }
 

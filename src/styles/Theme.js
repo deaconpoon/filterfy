@@ -12,7 +12,7 @@ module.exports = {
   },
   breakpoints: {
     xs: "300px",
-    sm: "768px",
+    sm: "600px",
     md: "992px",
     lg: "1100px",
     xl: "1300px",

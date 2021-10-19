@@ -8,7 +8,7 @@ import {
   filterType,
   filterPhase,
   filterTags,
-  renderFilteredProgramList,
+  renderFilteredProgramsList,
 } from "./store/reducer/programReducer";
 
 function App() {
@@ -25,22 +25,22 @@ function App() {
 
   const handleCategoryFilter = (value) => {
     dispatch(filterCategory(value));
-    dispatch(renderFilteredProgramList());
+    dispatch(renderFilteredProgramsList());
   };
 
   const handleTypeFilter = (value) => {
     dispatch(filterType(value));
-    dispatch(renderFilteredProgramList());
+    dispatch(renderFilteredProgramsList());
   };
 
   const handlePhaseFilter = (value) => {
     dispatch(filterPhase(value));
-    dispatch(renderFilteredProgramList());
+    dispatch(renderFilteredProgramsList());
   };
   const handleTagsFilter = (value) => {
     dispatch(filterTags(value));
     console.log(value);
-    dispatch(renderFilteredProgramList());
+    dispatch(renderFilteredProgramsList());
   };
 
   return (
@@ -70,12 +70,14 @@ function App() {
               placeholder="Select Program Tags"
               options={tagsOptions}
             />
-            {filteredProgramsList.map((program) => (
-              <Card
-                key={program.id}
-                resourceName={program["Resource Name"]}
-              ></Card>
-            ))}
+            <div className="grid">
+              {filteredProgramsList.map((program) => (
+                <Card
+                  key={program.id}
+                  resourceName={program["Resource Name"]}
+                ></Card>
+              ))}
+            </div>
           </main>
         </div>
       </ThemeProvider>
