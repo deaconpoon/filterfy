@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Card, Dropdown } from "../../components";
 import {
@@ -6,7 +7,6 @@ import {
   filterPhase,
   filterTags,
   renderFilteredProgramsList,
-  selectProgram,
 } from "../../store/reducer/programReducer";
 
 const HomePage = () => {
@@ -20,7 +20,9 @@ const HomePage = () => {
   const typeOptions = useSelector(({ programs }) => programs.typeOptions);
   const phaseOptions = useSelector(({ programs }) => programs.phaseOptions);
   const tagsOptions = useSelector(({ programs }) => programs.tagsOptions);
-  const filterParams = useSelector(({ programs }) => programs.filterParams);
+  const selectedProgram = useSelector(
+    ({ programs }) => programs.selectedProgram
+  );
   const handleCategoryFilter = (value) => {
     dispatch(filterCategory(value));
     dispatch(renderFilteredProgramsList());
@@ -39,12 +41,13 @@ const HomePage = () => {
     dispatch(filterTags(value));
     dispatch(renderFilteredProgramsList());
   };
-  const handleSelectedProgram = (id) => {
-    dispatch(selectProgram(id));
-  };
 
   return (
     <>
+      <div className="info">
+        <h3>{selectedProgram["Resource Name"]}</h3>
+        <p>{selectedProgram["Resource Description"]}</p>
+      </div>
       <Dropdown
         className="dropdown"
         placeholder="Select Program Category"

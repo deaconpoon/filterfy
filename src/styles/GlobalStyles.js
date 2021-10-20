@@ -78,7 +78,7 @@ const GlobalStyle = createGlobalStyle`
         font-weight: 700;
         font-size: 1.75rem;
         line-height: 2.25rem;
-        color: ${({ theme }) => theme.colors.primary};
+        color: #ffffff;
 
     }
 
@@ -169,6 +169,9 @@ const GlobalStyle = createGlobalStyle`
 
     .dropdown {
         margin-bottom: .5em;
+    }
+    .info {
+        color: lightgrey;
     }
 `;
 

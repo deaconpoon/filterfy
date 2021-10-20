@@ -142,7 +142,7 @@ const programsSlice = createSlice({
     selectProgram: (state, { payload }) => {
       const selectedProgram = state.programsList.filter(
         ({ id }) => id === payload
-      );
+      )[0];
       state.selectedProgram = selectedProgram;
     },
   },
