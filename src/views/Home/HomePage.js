@@ -6,6 +6,7 @@ import {
   filterPhase,
   filterTags,
   renderFilteredProgramsList,
+  selectProgram,
 } from "../../store/reducer/programReducer";
 
 const HomePage = () => {
@@ -36,43 +37,51 @@ const HomePage = () => {
   };
   const handleTagsFilter = (value) => {
     dispatch(filterTags(value));
-    console.log(value);
     dispatch(renderFilteredProgramsList());
   };
+  const handleSelectedProgram = (id) => {
+    dispatch(selectProgram(id));
+  };
+
   return (
     <>
       <Dropdown
+        className="dropdown"
         placeholder="Select Program Category"
         onChange={handleCategoryFilter}
         options={categoryOptions}
       />
       <Dropdown
+        className="dropdown"
         placeholder="Select Program Type"
         onChange={handleTypeFilter}
         options={typeOptions}
       />
       <Dropdown
+        className="dropdown"
         placeholder="Select Program Phase"
         onChange={handlePhaseFilter}
         options={phaseOptions}
       />
       <Dropdown
+        className="dropdown"
         isMulti
-        onChange={handleTagsFilter}
         placeholder="Select Program Tags"
+        onChange={handleTagsFilter}
         options={tagsOptions}
       />
       {filteredProgramsList.length !== 0 ? (
-        <div className="grid">
+        <div layout className="grid">
           {filteredProgramsList.map((program) => (
             <Card
               key={program.id}
+              id={program.id}
               resourceName={program["Resource Name"]}
             ></Card>
           ))}
         </div>
       ) : (
-        <div className="block">opasdfasasdfp</div>
+        <div className="block">Ops! Cannot find the program ¯\_(ツ)_/¯</div>
       )}
     </>
   );

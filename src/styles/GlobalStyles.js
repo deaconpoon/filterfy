@@ -104,6 +104,7 @@ const GlobalStyle = createGlobalStyle`
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap; 
+        background: linear-gradient(140.69deg, #B32DAA -9.07%, #B32DAA -9.06%, #B22DAA -9.05%, #B12DA9 -9.04%, #882493 15.49%, #742F8E 40.21%, #6268B1 67.86%, #6DB3EE 91.24%);
     }
     .body {
         width: 100%;
@@ -148,7 +149,14 @@ const GlobalStyle = createGlobalStyle`
         }
     }
     .block {
-        display: block;
+        display: flex;
+         width: 100%;
+         height: 70vh;
+         justify-content: center;
+         align-items: center;
+         color: white;
+         font-size: 20px;
+        
     }
 
     .hide {
@@ -157,6 +165,10 @@ const GlobalStyle = createGlobalStyle`
 
     .capitalize {
         text-transform: capitalize;
+    }
+
+    .dropdown {
+        margin-bottom: .5em;
     }
 `;
 

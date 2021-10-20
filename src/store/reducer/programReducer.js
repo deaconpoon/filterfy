@@ -81,6 +81,7 @@ const initialState = {
   tagsOptions: tagsOptions,
   filteredProgramsList: programsListWithID,
   filterParams: filterParams,
+  selectedProgram: programsListWithID[0],
 };
 
 const programsSlice = createSlice({
@@ -138,6 +139,12 @@ const programsSlice = createSlice({
               ))
       );
     },
+    selectProgram: (state, { payload }) => {
+      const selectedProgram = state.programsList.filter(
+        ({ id }) => id === payload
+      );
+      state.selectedProgram = selectedProgram;
+    },
   },
 });
 
@@ -149,6 +156,7 @@ export const {
   filterPhase,
   filterTags,
   renderFilteredProgramsList,
+  selectProgram,
 } = actions;
 
 export default programsSlice.reducer;

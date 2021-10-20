@@ -1,5 +1,7 @@
 import styled from "styled-components";
+import { useDispatch } from "react-redux";
 import { motion, AnimatePresence } from "framer-motion";
+import { selectProgram } from "../../store/reducer/programReducer";
 
 const Container = styled(motion.li)`
   width: 100%;
@@ -13,18 +15,24 @@ const Container = styled(motion.li)`
   box-shadow: 1px 2px 6px 0px rgba(99, 99, 99, 0.527);
 `;
 
-const Card = ({ resourceName }) => {
-  const spring = { type: "spring", bounce: 0.8 };
+const Card = ({ resourceName, key, id }) => {
+  const dispatch = useDispatch();
+  const handleSelectedProgram = (id) => {
+    dispatch(selectProgram(id));
+  };
+  const spring = { type: "spring", bounce: 0.66 };
   return (
     <>
       <AnimatePresence>
         <Container
-          transition={spring}
-          whileHover={{ scale: 1.01 }}
-          whileTap={{ scale: 0.98 }}
+          onClick={() => handleSelectedProgram(id)}
+          key={key}
+          positionTransition={spring}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.9 }}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          exit={{ y: 300, opacity: 0 }}
+          exit={{ opacity: 0 }}
         >
           <h4>{resourceName}</h4>
         </Container>
