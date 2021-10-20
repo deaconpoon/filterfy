@@ -73,12 +73,6 @@ const filterParams = {
   tags: [],
 };
 
-//loop through programsList
-
-//if filterParam is [], then return. Else each program filter through each param in filterParams
-
-//return program if it matches all the test
-
 const initialState = {
   programsList: programsListWithID,
   categoryOptions: categoryOptions,
@@ -146,8 +140,6 @@ const programsSlice = createSlice({
     },
   },
 });
-
-//if tags is an []
 
 const { actions } = programsSlice;
 

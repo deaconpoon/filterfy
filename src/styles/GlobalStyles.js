@@ -106,6 +106,8 @@ const GlobalStyle = createGlobalStyle`
         flex-wrap: nowrap; 
     }
     .body {
+        width: 100%;
+        height: 100%;
         padding: 2em;
         overflow: auto;
         min-height: 2em;
@@ -141,9 +143,12 @@ const GlobalStyle = createGlobalStyle`
         grid-template-columns: 1fr;
         grid-template-rows: auto;
         gap: 1em;
-            grid-template-columns: repeat(8, 1fr) ;
+        grid-template-columns: repeat(8, 1fr) ;
         
         }
+    }
+    .block {
+        display: block;
     }
 
     .hide {
