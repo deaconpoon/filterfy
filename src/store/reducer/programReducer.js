@@ -1,6 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { v4 as uuidv4 } from "uuid";
-import _ from "lodash";
 import ProgramsList from "../../utils/csvjson.json";
 
 const programsList = JSON.parse(JSON.stringify(ProgramsList));
@@ -19,7 +18,7 @@ const categoryOptions = programsList.reduce((option, program) => {
   ]
     .filter(
       (option, index, array) =>
-        array.findIndex((o) => o.value === option.value) == index
+        array.findIndex((o) => o.value === option.value) === index
     )
     .sort((a, b) => a.value.localeCompare(b.value));
 }, []);
@@ -33,7 +32,7 @@ const typeOptions = programsList.reduce((option, program) => {
   ]
     .filter(
       (option, index, array) =>
-        array.findIndex((o) => o.value === option.value) == index
+        array.findIndex((o) => o.value === option.value) === index
     )
     .sort((a, b) => a.value.localeCompare(b.value));
 }, []);
@@ -47,7 +46,7 @@ const phaseOptions = programsList.reduce((option, program) => {
   ]
     .filter(
       (option, index, array) =>
-        array.findIndex((o) => o.value === option.value) == index
+        array.findIndex((o) => o.value === option.value) === index
     )
     .sort((a, b) => a.value.localeCompare(b.value));
 }, []);
@@ -62,7 +61,7 @@ const tagsOptions = programsList.reduce((option, program) => {
     .flat()
     .filter(
       (option, index, array) =>
-        array.findIndex((o) => o.value === option.value) == index
+        array.findIndex((o) => o.value === option.value) === index
     )
     .sort((a, b) => a.value.localeCompare(b.value));
 }, []);

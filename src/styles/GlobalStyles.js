@@ -78,7 +78,7 @@ const GlobalStyle = createGlobalStyle`
         font-weight: 700;
         font-size: 1.75rem;
         line-height: 2.25rem;
-        color: #ffffff;
+        color: #f6cf3f;
 
     }
 
@@ -151,7 +151,7 @@ const GlobalStyle = createGlobalStyle`
     .block {
         display: flex;
          width: 100%;
-         height: 70vh;
+         height: 50vh;
          justify-content: center;
          align-items: center;
          color: white;
@@ -170,8 +170,19 @@ const GlobalStyle = createGlobalStyle`
     .dropdown {
         margin-bottom: .5em;
     }
+    .dropdown:last-of-type {
+        margin-bottom: 1em;
+    }
     .info {
-        color: lightgrey;
+        color: white;
+    }
+    .count {
+        display: flex;
+        justify-content: flex-end;
+        font-size: 16px;
+        font-weight: 500;
+        color: white;
+        min-height: 24px
     }
 `;
 

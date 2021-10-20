@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Card, Dropdown } from "../../components";
 import {
@@ -20,6 +19,8 @@ const HomePage = () => {
   const typeOptions = useSelector(({ programs }) => programs.typeOptions);
   const phaseOptions = useSelector(({ programs }) => programs.phaseOptions);
   const tagsOptions = useSelector(({ programs }) => programs.tagsOptions);
+  const filterParams = useSelector(({ programs }) => programs.filterParams);
+  const tags = filterParams.tags;
   const selectedProgram = useSelector(
     ({ programs }) => programs.selectedProgram
   );
@@ -73,8 +74,11 @@ const HomePage = () => {
         onChange={handleTagsFilter}
         options={tagsOptions}
       />
+      <p className="count">
+        {tags.length !== 0 ? `Tag count: ${filteredProgramsList.length}` : ""}
+      </p>
       {filteredProgramsList.length !== 0 ? (
-        <div layout className="grid">
+        <div className="grid">
           {filteredProgramsList.map((program) => (
             <Card
               key={program.id}

@@ -13,9 +13,10 @@ const Container = styled(motion.li)`
   margin-bottom: 0.5em;
   gap: 1em;
   box-shadow: 1px 2px 6px 0px rgba(99, 99, 99, 0.527);
+  cursor: pointer;
 `;
 
-const Card = ({ resourceName, key, id }) => {
+const Card = ({ resourceName, id }) => {
   const dispatch = useDispatch();
   const handleSelectedProgram = (id) => {
     dispatch(selectProgram(id));
@@ -26,7 +27,6 @@ const Card = ({ resourceName, key, id }) => {
       <AnimatePresence>
         <Container
           onClick={() => handleSelectedProgram(id)}
-          key={key}
           positionTransition={spring}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.9 }}
