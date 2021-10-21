@@ -88,7 +88,7 @@ const HomePage = () => {
           ))}
         </div>
       ) : (
-        <div className="block">Ops! Cannot find the program ¯\_(ツ)_/¯</div>
+        <div className="block">Oops! Cannot find the program ¯\_(ツ)_/¯</div>
       )}
     </>
   );

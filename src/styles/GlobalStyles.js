@@ -151,11 +151,14 @@ const GlobalStyle = createGlobalStyle`
     .block {
         display: flex;
          width: 100%;
-         height: 50vh;
+         height: 30vh;
          justify-content: center;
          align-items: center;
          color: white;
          font-size: 20px;
+         @media (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+        height: 50vh;
+        }
         
     }
 
