@@ -46,28 +46,34 @@ const HomePage = () => {
   return (
     <>
       <div className="info">
-        <h3>{selectedProgram["Resource Name"]}</h3>
-        <p>{selectedProgram["Resource Description"]}</p>
+        <h3 data-testid="title-program">{selectedProgram["Resource Name"]}</h3>
+        <p data-testid="description-program">
+          {selectedProgram["Resource Description"]}
+        </p>
       </div>
       <Dropdown
+        testid="dropdown-program-category"
         className="dropdown"
         placeholder="Select Program Category"
         onChange={handleCategoryFilter}
         options={categoryOptions}
       />
       <Dropdown
+        testid="dropdown-program-type"
         className="dropdown"
         placeholder="Select Program Type"
         onChange={handleTypeFilter}
         options={typeOptions}
       />
       <Dropdown
+        testid="dropdown-program-phase"
         className="dropdown"
         placeholder="Select Program Phase"
         onChange={handlePhaseFilter}
         options={phaseOptions}
       />
       <Dropdown
+        testid="dropdown-program-tags"
         className="dropdown"
         isMulti
         placeholder="Select Program Tags"
@@ -81,6 +87,7 @@ const HomePage = () => {
         <div className="grid">
           {filteredProgramsList.map((program) => (
             <Card
+              testid="card-program"
               key={program.id}
               id={program.id}
               resourceName={program["Resource Name"]}

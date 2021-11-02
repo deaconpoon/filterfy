@@ -16,7 +16,7 @@ const Container = styled(motion.li)`
   cursor: pointer;
 `;
 
-const Card = ({ resourceName, id }) => {
+const Card = ({ testid, resourceName, id }) => {
   const dispatch = useDispatch();
   const handleSelectedProgram = (id) => {
     dispatch(selectProgram(id));
@@ -26,6 +26,7 @@ const Card = ({ resourceName, id }) => {
     <>
       <AnimatePresence>
         <Container
+          data-testid={testid}
           onClick={() => handleSelectedProgram(id)}
           positionTransition={spring}
           whileHover={{ scale: 1.05 }}
@@ -34,7 +35,7 @@ const Card = ({ resourceName, id }) => {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
         >
-          <h4>{resourceName}</h4>
+          <h4 data-testid="card-title-program">{resourceName}</h4>
         </Container>
       </AnimatePresence>
     </>
